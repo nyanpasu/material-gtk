@@ -1,0 +1,11 @@
+[X-GNOME-Metatheme]
+Name=Material
+Name[en_GB]=Material
+
+Type=X-GNOME-Metatheme
+Encoding=UTF-8
+GtkTheme=Material
+MetacityTheme=Material
+IconTheme=Material
+CursorTheme=Material
+CursorSize=24

@@ -1,0 +1,142 @@
+/* default color scheme */
+@define-color bg_color #ffffff;
+@define-color fg_color #555555;
+@define-color base_color #fefefe;
+@define-color text_color #333333;
+@define-color selected_bg_color transparent;
+@define-color selected_fg_color #df253f;
+@define-color tooltip_bg_color #fefefe;
+@define-color tooltip_fg_color #2d2d2d;
+
+/* colormap actually used by the theme, to be overridden in other css files */
+@define-color theme_bg_color #ffffff;
+@define-color theme_fg_color #212121;
+@define-color theme_base_color @base_color;
+@define-color theme_text_color @text_color;
+@define-color theme_selected_bg_color @selected_bg_color;
+@define-color theme_selected_fg_color #00897B;
+@define-color theme_tooltip_bg_color @tooltip_bg_color;
+@define-color theme_tooltip_fg_color @tooltip_fg_color;
+@define-color theme_primary_color #00897B;
+
+/* default */
+* {
+    background-clip: padding-box;
+
+    outline-color: alpha(@theme_selected_fg_color, 0.5);
+    outline-style: solid;
+    outline-offset: 0;
+}
+
+.background {
+    background-color: @theme_bg_color;
+    color: @theme_fg_color;
+}
+
+.titlebar {
+    background-color: @theme_primary_color;
+}
+
+headerbar {
+    padding: 0px;
+}
+
+headerbar button {
+    background-color: rgba(0,0,0,0);
+    color: rgba(255,255,255,0.7);
+    font-variant: small-caps;
+    font-weight: 500;
+    padding-top: 28px;
+    padding-bottom: 20px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+headerbar button:hover { 
+    background-color: rgba(0,0,0,0);
+    color: rgba(255,255,255,1);
+}
+
+headerbar button:checked { 
+    background-color: rgba(0,0,0,0);
+    color: rgba(255,255,255,1);
+    border-radius: 0px;
+    border-bottom: 2px inset;
+    border-color: #fff;
+}
+
+button {
+    font-weight: bold;
+    background-color: rgba(0,0,0,0);
+    border-radius: 2px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+button:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+button:selected {
+    background-color: rgba(0,0,0,0.2);
+}
+
+button:disabled {
+    opacity: 0.26;
+}
+
+button:checked {
+    background-color: rgba(0,0,0,0.2);
+}
+
+notebook header {
+    background-color: @theme_primary_color;
+}
+
+notebook header tab {
+    font-weight: 500;
+    color: rgba(255,255,255,0.7);
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 20px;
+    padding-top: 28px;
+}
+
+notebook header tab:hover { 
+    color: rgba(255,255,255,1);
+}
+
+notebook header tab:checked { 
+    color: rgba(255,255,255,1);
+}
+
+notebook header.top tab:checked { 
+    border-bottom: 2px inset;
+    border-color: #fff;
+}
+
+entry {
+    padding-top: 16px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid;
+    border-color: rgba(0,0,0,0.2);
+}
+
+entry {
+    border-bottom: 1px solid;
+    border-color: rgba(0,0,0,0.2);
+}
+
+entry:focus {
+    border-bottom: 2px solid;
+    border-color: rgb(0,137,123);
+}
+
+entry:disabled {
+    color: rgba(0,0,0,0.2);
+    border-bottom: 1px dashed;
+    border-color: rgba(0,0,0,0.2);
+}
